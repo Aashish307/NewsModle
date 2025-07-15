@@ -8,7 +8,7 @@ from nltk.stem import PorterStemmer
 
 nltk.download('stopwords')
 words = stopwords.words("english")
-stremmer = PorterStremmer()
+stemmer = PorterStemmer()
 
 
 file = open('LogisticRegression.pickle','rb')
