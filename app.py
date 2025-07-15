@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle as pk
 
+
 file = open('LogisticRegression.pickle','rb')
 model = pk.load(file)
 
@@ -13,5 +14,6 @@ if st.button('submit'):
     df = pd.DataFrame(
         {'text':[news]}
     )
+
     result = model.predict(df['text'])
     st.write(result)
